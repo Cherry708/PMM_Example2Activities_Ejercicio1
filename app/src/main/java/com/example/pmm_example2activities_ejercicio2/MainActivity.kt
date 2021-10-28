@@ -15,8 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener{
 
-            val editText = findViewById<EditText>(R.id.editTextName)
-            val name = editText.text.toString()
+            val etName = findViewById<EditText>(R.id.editTextName)
+            val name = etName.text.toString()
+            val etName2 = findViewById<EditText>(R.id.editTextName2)
+            val lastname = etName2.text.toString()
 
             val intent = Intent(this, GreetingActivity::class.java)
             /*
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
             el valor mediante esta clave
              */
             intent.putExtra("name", name)
+            intent.putExtra("lastname", lastname)
 
             startActivity(intent)
         }

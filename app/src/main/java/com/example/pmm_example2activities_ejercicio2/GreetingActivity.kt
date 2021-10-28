@@ -16,9 +16,10 @@ class GreetingActivity : AppCompatActivity() {
         MainActivity
          */
         val name = extras?.getString("name")
+        val lastName = extras?.getString("lastname")
 
         val text = findViewById<TextView>(R.id.textViewGreeting)
-        val show = "Hello $name"
+        val show = "Hello $name $lastName"
         text.setText(show)
     }
 }
