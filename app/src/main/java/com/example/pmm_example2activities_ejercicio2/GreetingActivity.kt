@@ -1,6 +1,5 @@
 package com.example.pmm_example2activities_ejercicio1
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -11,9 +10,12 @@ class GreetingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_greeting)
 
         val intent = getIntent()
-        val b = intent.getExtras()
-        
-        val name = b?.getString("name")
+        val extras = intent.getExtras()
+        /*
+        Recuperamos el valor asignado a la clave en la clase
+        MainActivity
+         */
+        val name = extras?.getString("name")
 
         val text = findViewById<TextView>(R.id.textViewGreeting)
         val show = "Hello $name"

@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
             val name = editText.text.toString()
 
             val intent = Intent(this, GreetingActivity::class.java)
+            /*
+            Se asigna como extra una clave y un valor, en la otra actividad recogeremos
+            el valor mediante esta clave
+             */
             intent.putExtra("name", name)
 
             startActivity(intent)
